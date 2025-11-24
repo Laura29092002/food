@@ -1,0 +1,16 @@
+.planning-page{
+    margin: 20px 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.day{
+    width: 100%;
+    text-align: center;
+    h2{
+        color: #5B351B;
+        font-size: 24px;
+        margin-bottom: 50px;
+    }
+}
