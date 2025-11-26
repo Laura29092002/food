@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS recipe(
     id SERIAL PRIMARY KEY,
     name VARCHAR(50) NOT NULL,
-    image BYTEA
+    image VARCHAR(200)
 );
 
 
@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS category(
 CREATE TABLE IF NOT EXISTS ingredient(
     id SERIAL PRIMARY KEY,
     name VARCHAR(50) NOT NULL,
-    image BYTEA,
+    image VARCHAR(200),
     category_id INTEGER,
     FOREIGN KEY (category_id) REFERENCES category(id)
 );

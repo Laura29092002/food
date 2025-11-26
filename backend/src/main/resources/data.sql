@@ -1,4 +1,4 @@
-/*INSERT INTO recipe(name) VALUES
+INSERT INTO recipe(name) VALUES
     ('pâtes');
 
 
@@ -11,7 +11,7 @@ INSERT INTO day (name, recipe_lunch_id, recipe_dinner_id) VALUES
     ('samedi', 1, 1),
     ('dimanche', 1, 1);
 
-INSERT INTO step (number, description, recipe_id) VALUES
+/*INSERT INTO step (number, description, recipe_id) VALUES
     (1, 'Faire cuir les pâtes', 1),
     (2, 'Ensuite les égouter', 1);
 
@@ -28,9 +28,9 @@ INSERT INTO ingredient(name, category_id) VALUES
     ('pâtes', 3);
 
 INSERT INTO recipe_to_ingredient(recipe_id, ingredient_id, quantity) VALUES
-    (1,1, 200);
+    (1,1, 200);*/
 
-  */
+  
 
 
 

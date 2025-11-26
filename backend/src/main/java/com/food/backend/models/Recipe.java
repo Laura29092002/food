@@ -14,9 +14,9 @@ public class Recipe{
     private String name;
 
     @Column(name = "image")
-    private byte[] image;
+    private String image;
 
-    Recipe(int id, String name, byte[] image){
+    Recipe(int id, String name, String image){
         this.id = id;
         this.name = name;
         this.image = image;
@@ -39,10 +39,10 @@ public class Recipe{
         this.name = name;
     }
 
-    public byte[] getImage() {
+    public String getImage() {
         return image;
     }
-    public void setImage(byte[] image) {
+    public void setImage(String image) {
         this.image = image;
     }
 }

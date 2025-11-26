@@ -13,7 +13,7 @@ public class Ingredient {
     private String name;
 
     @Column(name = "image")
-    private byte[] image;
+    private String image;
 
     @Column(name = "category_id")
     private int categoryId;
@@ -23,7 +23,7 @@ public class Ingredient {
     }
 
 
-    public Ingredient(int id, String name, byte[] image, int categoryId) {
+    public Ingredient(int id, String name, String image, int categoryId) {
         this.id = id;
         this.name = name;
         this.image = image;
@@ -45,10 +45,10 @@ public class Ingredient {
         this.name = name;
     }
 
-    public byte[] getImage() {
+    public String getImage() {
         return image;
     }
-    public void setImage(byte[] image) {
+    public void setImage(String image) {
         this.image = image;
     }
 

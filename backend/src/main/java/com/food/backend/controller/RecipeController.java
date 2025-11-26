@@ -44,4 +44,9 @@ public class RecipeController {
     public void delete(@PathVariable int id) {
         recipeRepository.deleteById(id);
     }
+
+    @PostMapping("/{id_recipe}/{id_ingredient}/{quantity}")
+    public void save(@PathVariable int id_recipe, @PathVariable int id_ingredient, @PathVariable int quantity) {
+        recipeRepository.addAllIngredientToRecipe(id_recipe, id_ingredient, quantity);
+    }
 }
