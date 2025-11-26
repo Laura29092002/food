@@ -22,7 +22,7 @@ export class RecipeForm1 implements OnInit, OnDestroy{
   constructor(private store: Store, private fb: FormBuilder) { 
     this.form = this.fb.group({
       name: ['', Validators.required],
-      imageUrl: ['']
+      image: ['']
     });
   }
 
@@ -35,8 +35,8 @@ export class RecipeForm1 implements OnInit, OnDestroy{
             name: recette.name || ''
           }, {emitEvent: false});
         }
-        if(recette.imageUrl){
-          this.imagePreview = recette.imageUrl;
+        if(recette.image){
+          this.imagePreview = recette.image;
         }
         
       }
@@ -45,11 +45,11 @@ export class RecipeForm1 implements OnInit, OnDestroy{
 
     this.form.valueChanges.pipe(debounceTime(500), takeUntil(this.destroy$)).subscribe(value => {
       this.store.dispatch(RecipeFormActions.saveRecetteData({
-            recette : {
+            
               id: 0,
               name: this.form.value.name,
-              imageUrl : ''
-            }
+              image : ''
+            
           }));
     });
   }
@@ -65,13 +65,13 @@ export class RecipeForm1 implements OnInit, OnDestroy{
         this.imagePreview = e.target?.result as string;
 
         this.store.dispatch(
-          RecipeFormActions.saveRecetteData({
-            recette : {
+          RecipeFormActions.saveRecetteData(
+            {
               id: 0,
               name: this.form.value.name,
-              imageUrl : this.imagePreview 
+              image : this.imagePreview 
             }
-          }
+          
 
           )
         )
@@ -82,7 +82,7 @@ export class RecipeForm1 implements OnInit, OnDestroy{
 
   ngOnDestroy(): void {
     if(this.form.dirty) {
-      this.store.dispatch(RecipeFormActions.saveRecetteData({ recette: this.form.value }));
+      this.store.dispatch(RecipeFormActions.saveRecetteData(this.form.value ));
     }
     this.destroy$.next();
     this.destroy$.complete();

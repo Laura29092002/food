@@ -6,7 +6,7 @@ import { Ingredient } from '../models/ingredient/ingredient.model';
 // Actions pour la partie Recette
 export const saveRecetteData = createAction(
   '[Recipe Form] Save Recette Data',
-  props<{ recette: Recipe }>()
+  props<Recipe>()
 );
 
 // Actions pour les ingrédients

@@ -6,9 +6,9 @@ export const recipeFormReducer = createReducer(
   initialRecipeFormState,
 
   // Recette
-  on(RecipeFormActions.saveRecetteData, (state, { recette }) => ({
+  on(RecipeFormActions.saveRecetteData, (state, recette ) => ({
     ...state,
-    recetteData: { ...state.recetteData, recette}
+    recetteData: { ...state.recetteData, ...recette}
   })),
 
   // Ingrédients - SAVE (remplace complètement la liste)

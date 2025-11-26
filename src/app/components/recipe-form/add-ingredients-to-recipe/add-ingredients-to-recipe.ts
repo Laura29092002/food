@@ -90,7 +90,7 @@ export class AddIngredientsToRecipe implements OnInit, OnDestroy{
         ({
           id: item.id,
           name: item.name,
-          quantity: item.quantity
+          quantity: this.quantities[item.id] || 0
         })
       );
 

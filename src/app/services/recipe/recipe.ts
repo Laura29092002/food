@@ -24,9 +24,16 @@ export class RecipeService {
     return this.http.get<Ingredient[]>(`${this.apiUrl}/ingredients/${id}`);
   }
 
+  addIngredientToRecipe(id_recipe: number, id_ingredient: number, quantity: number){
+    return this.http.post<number>(`${this.apiUrl}/${id_recipe}/${id_ingredient}/${quantity}`, id_recipe);
+  }
+
+  
   addRecipe(recipe: Recipe) {
     return this.http.post<Recipe>(this.apiUrl, recipe);
   }
+
+  
 
   updateRecipe(id: number, updatedRecipe: Recipe) {
     return this.http.put<Recipe>(`${this.apiUrl}/${id}`, updatedRecipe);

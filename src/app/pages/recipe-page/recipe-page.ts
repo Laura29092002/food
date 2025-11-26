@@ -21,13 +21,7 @@ export class RecipePage implements OnInit {
   private readonly recipeService = inject(RecipeService);
   private readonly destroyRef = inject(DestroyRef);
 
-  recipe: Recipe = {
-    id: 0,
-    name: '',
-    imageUrl: '',
-    ingredients: [],
-    steps: []
-  };
+  recipe!: Recipe;
 
   isLoading = true;
   error: string | null = null;

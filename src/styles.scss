@@ -36,4 +36,14 @@ body {
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: 'Gluten', cursive; }
+body { margin: 0; font-family: 'Gluten', cursive; overflow-x: hidden;}
+button{
+    padding: 10px 15px;
+    border-radius: 30px;
+    border: none;
+    background-color: #774b2e;
+    font-family: 'Gluten', cursive;
+    font-weight: 300;
+    color: white;
+    cursor: pointer;
+}

@@ -43,7 +43,7 @@ else if(this.textareaFields.length == 0){
       id: newId,
       description: '',
       number: this.textareaFields.length + 1,
-      recipe_id: 0
+      recipeId: 0
     };
     
     this.textareaFields.push(newStep);
